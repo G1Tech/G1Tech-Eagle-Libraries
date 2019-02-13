@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -180,10 +180,86 @@
 <wire x1="1.58" y1="-1.58" x2="1.58" y2="1.58" width="0.1" layer="21"/>
 <circle x="1.2" y="1.8" radius="0.15" width="0" layer="21"/>
 </package>
+<package name="LGA-2.5X2.5">
+<description>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf</description>
+<wire x1="-1.55" y1="1.45" x2="1.55" y2="1.45" width="0" layer="39"/>
+<wire x1="1.55" y1="1.45" x2="1.55" y2="-1.45" width="0" layer="39"/>
+<wire x1="1.55" y1="-1.45" x2="-1.55" y2="-1.45" width="0" layer="39"/>
+<wire x1="-1.55" y1="-1.45" x2="-1.55" y2="1.45" width="0" layer="39"/>
+<smd name="8" x="-1.025" y="0.975" dx="0.5" dy="0.35" layer="1"/>
+<smd name="1" x="1.025" y="0.975" dx="0.5" dy="0.35" layer="1"/>
+<text x="-1.4" y="1.45" size="0.6096" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-1.45" size="0.6096" layer="27" font="vector" align="top-center">&gt;VALUE</text>
+<wire x1="-1.44" y1="1.33" x2="1.44" y2="1.33" width="0.1" layer="21"/>
+<smd name="7" x="-1.025" y="0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="6" x="-1.025" y="-0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="5" x="-1.025" y="-0.975" dx="0.5" dy="0.35" layer="1"/>
+<smd name="2" x="1.025" y="0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="3" x="1.025" y="-0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="4" x="1.025" y="-0.975" dx="0.5" dy="0.35" layer="1"/>
+<wire x1="-1.44" y1="1.33" x2="-1.44" y2="-1.33" width="0.1" layer="21"/>
+<wire x1="-1.44" y1="-1.33" x2="1.44" y2="-1.33" width="0.1" layer="21"/>
+<wire x1="1.44" y1="-1.33" x2="1.44" y2="1.33" width="0.1" layer="21"/>
+<circle x="0.4" y="1" radius="0.15" width="0" layer="21"/>
+</package>
+<package name="LGA-2.0X2.5">
+<description>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001.pdf</description>
+<wire x1="-1.35" y1="1.45" x2="1.35" y2="1.45" width="0" layer="39"/>
+<wire x1="1.35" y1="1.45" x2="1.35" y2="-1.45" width="0" layer="39"/>
+<wire x1="1.35" y1="-1.45" x2="-1.35" y2="-1.45" width="0" layer="39"/>
+<wire x1="-1.35" y1="-1.45" x2="-1.35" y2="1.45" width="0" layer="39"/>
+<smd name="8" x="-0.8" y="0.975" dx="0.5" dy="0.35" layer="1"/>
+<smd name="1" x="0.8" y="0.975" dx="0.5" dy="0.35" layer="1"/>
+<text x="-1.4" y="1.45" size="0.6096" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-1.45" size="0.6096" layer="27" font="vector" align="top-center">&gt;VALUE</text>
+<wire x1="-1.24" y1="1.33" x2="1.24" y2="1.33" width="0.1" layer="21"/>
+<smd name="7" x="-0.8" y="0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="6" x="-0.8" y="-0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="5" x="-0.8" y="-0.975" dx="0.5" dy="0.35" layer="1"/>
+<smd name="2" x="0.8" y="0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="3" x="0.8" y="-0.325" dx="0.5" dy="0.35" layer="1"/>
+<smd name="4" x="0.8" y="-0.975" dx="0.5" dy="0.35" layer="1"/>
+<wire x1="-1.24" y1="1.33" x2="-1.24" y2="-1.33" width="0.1" layer="21"/>
+<wire x1="-1.24" y1="-1.33" x2="1.24" y2="-1.33" width="0.1" layer="21"/>
+<wire x1="1.24" y1="-1.33" x2="1.24" y2="1.33" width="0.1" layer="21"/>
+<circle x="0.2" y="1" radius="0.15" width="0" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BME680">
 <description>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-DS001-00.pdf</description>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="12.7" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-5.08" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<pin name="VDD" x="-12.7" y="5.08" length="short"/>
+<pin name="VDDIO" x="-12.7" y="2.54" length="short"/>
+<pin name="GND" x="-12.7" y="-2.54" length="short"/>
+<pin name="SDO/ADD" x="15.24" y="-2.54" length="short" rot="R180"/>
+<pin name="SCK/SCL" x="15.24" y="0" length="short" rot="R180"/>
+<pin name="SDI/SDA" x="15.24" y="2.54" length="short" rot="R180"/>
+<pin name="!CS" x="15.24" y="5.08" length="short" rot="R180"/>
+<text x="-9.525" y="8.255" size="1.778" layer="95">&gt;Name</text>
+<text x="-9.525" y="-7.62" size="1.778" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="BME280">
+<description>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf</description>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="12.7" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-5.08" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<pin name="VDD" x="-12.7" y="5.08" length="short"/>
+<pin name="VDDIO" x="-12.7" y="2.54" length="short"/>
+<pin name="GND" x="-12.7" y="-2.54" length="short"/>
+<pin name="SDO/ADD" x="15.24" y="-2.54" length="short" rot="R180"/>
+<pin name="SCK/SCL" x="15.24" y="0" length="short" rot="R180"/>
+<pin name="SDI/SDA" x="15.24" y="2.54" length="short" rot="R180"/>
+<pin name="!CS" x="15.24" y="5.08" length="short" rot="R180"/>
+<text x="-9.525" y="8.255" size="1.778" layer="95">&gt;Name</text>
+<text x="-9.525" y="-7.62" size="1.778" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="BMP280">
+<description>https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001.pdf</description>
 <wire x1="-10.16" y1="7.62" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-5.08" x2="12.7" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="12.7" y1="-5.08" x2="12.7" y2="7.62" width="0.254" layer="94"/>
@@ -206,6 +282,48 @@
 </gates>
 <devices>
 <device name="" package="LGA-3.0X3.0">
+<connects>
+<connect gate="G$1" pin="!CS" pad="2"/>
+<connect gate="G$1" pin="GND" pad="1 7"/>
+<connect gate="G$1" pin="SCK/SCL" pad="4"/>
+<connect gate="G$1" pin="SDI/SDA" pad="3"/>
+<connect gate="G$1" pin="SDO/ADD" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="8"/>
+<connect gate="G$1" pin="VDDIO" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BOSH-BME280" prefix="U" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="BME280" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LGA-2.5X2.5">
+<connects>
+<connect gate="G$1" pin="!CS" pad="2"/>
+<connect gate="G$1" pin="GND" pad="1 7"/>
+<connect gate="G$1" pin="SCK/SCL" pad="4"/>
+<connect gate="G$1" pin="SDI/SDA" pad="3"/>
+<connect gate="G$1" pin="SDO/ADD" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="8"/>
+<connect gate="G$1" pin="VDDIO" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BOSH-BMP280" prefix="U" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="BMP280" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LGA-2.0X2.5">
 <connects>
 <connect gate="G$1" pin="!CS" pad="2"/>
 <connect gate="G$1" pin="GND" pad="1 7"/>
